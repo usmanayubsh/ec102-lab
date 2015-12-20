@@ -1,0 +1,16 @@
+\frametitle{Exercise}
+    \subsection{Exercise} % (fold)
+    \label{subsec:do_exercise}
+    Write a program using \texttt{do} loop that repeatedly asks for a number and calculates its factorial until the user enters 0, at which point it terminates. \\ [0.2 in]
+    Here goes a sample interaction with the program: \\
+    \lstset{style=mystyle}
+\begin{lstlisting}
+Enter a number: 7
+The factorial of the number is: 5040
+Enter a number: 6
+The factorial of the number is: 720
+Enter a number: 5
+The factorial of the number is: 120
+Enter a number: 0
+The factorial of the number is: 1
+\end{lstlisting}

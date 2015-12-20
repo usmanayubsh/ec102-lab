@@ -1,0 +1,19 @@
+\frametitle{Solved Example 3}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=16]
+int main()
+{
+    Room dining;
+
+    dining.length.feet = 13; // nested structure member
+    dining.length.inches = 6.5;
+    dining.width.feet = 10;
+    dining.width.inches = 0.0;
+
+    float l = dining.length.feet + dining.length.inches / 12;
+    float w = dining.width.feet + dining.width.inches / 12;
+
+    cout << "Dining room area is: " << l * w << " sq ft\n";
+    return 0;
+}
+\end{lstlisting}

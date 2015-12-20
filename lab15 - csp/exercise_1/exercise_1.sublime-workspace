@@ -1,0 +1,1146 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"xml",
+				"xml_file_open	statement"
+			],
+			[
+				"d",
+				"display_distance"
+			],
+			[
+				"s",
+				"square"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"mi",
+				"multiplier"
+			],
+			[
+				"l",
+				"l_train"
+			],
+			[
+				"dis",
+				"dist3"
+			],
+			[
+				"e",
+				"engl_display"
+			],
+			[
+				"end",
+				"engl_add"
+			],
+			[
+				"dist",
+				"dist1"
+			],
+			[
+				"D",
+				"Distance"
+			],
+			[
+				"Di",
+				"engl_display"
+			],
+			[
+				"sec",
+				"seconds"
+			],
+			[
+				"se",
+				"separator"
+			],
+			[
+				"sum",
+				"sum_in_seconds"
+			],
+			[
+				"tim",
+				"time_to_secs"
+			],
+			[
+				"reu",
+				"result"
+			],
+			[
+				"lbs",
+				"lbstokgs"
+			],
+			[
+				"circ",
+				"circle_area"
+			],
+			[
+				"ci",
+				"circle_area"
+			],
+			[
+				"rep",
+				"rep_char"
+			],
+			[
+				"sublime",
+				"sublime-text"
+			],
+			[
+				"t",
+				"type"
+			],
+			[
+				"inc",
+				"inches"
+			],
+			[
+				"in",
+				"inches"
+			],
+			[
+				"part",
+				"partnumber"
+			],
+			[
+				"pat",
+				"part1"
+			],
+			[
+				"num",
+				"num_1"
+			],
+			[
+				"inta",
+				"intake_params	statement"
+			],
+			[
+				"dic",
+				"dictionary	param"
+			],
+			[
+				"render",
+				"render_form	function"
+			],
+			[
+				"semester",
+				"semester_selected"
+			],
+			[
+				"pro",
+				"program_selected"
+			],
+			[
+				"plo",
+				"plo_av	statement"
+			],
+			[
+				"o",
+				"out"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"class",
+				"class_names	function"
+			],
+			[
+				"uni",
+				"unique	statement"
+			],
+			[
+				"statement",
+				"statement"
+			],
+			[
+				"for",
+				"form_params	statement"
+			],
+			[
+				"f",
+				"form_params	statement"
+			],
+			[
+				"form",
+				"form_params"
+			],
+			[
+				"this",
+				"this_dir	statement"
+			],
+			[
+				"semes",
+				"semesters	statement"
+			],
+			[
+				"dir",
+				"dir_struct"
+			],
+			[
+				"get",
+				"get_directory_structure	function"
+			],
+			[
+				"rs",
+				"response"
+			],
+			[
+				"program",
+				"program_dir	statement"
+			],
+			[
+				"intake",
+				"intakes	param"
+			],
+			[
+				"lis",
+				"list_of_semesters"
+			],
+			[
+				"progra",
+				"program	statement"
+			],
+			[
+				"data",
+				"data_dir	statement"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"wa",
+				"walk	function"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"art",
+				"article	statement"
+			],
+			[
+				"from",
+				"from_path"
+			],
+			[
+				"artic",
+				"articlepage"
+			],
+			[
+				"auto",
+				"auto_now_add"
+			],
+			[
+				"list",
+				"list_of_pages"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"lin",
+				"link_by_id_better	function"
+			],
+			[
+				"link",
+				"link_id	param"
+			],
+			[
+				"subm",
+				"submitted_time"
+			],
+			[
+				"sub",
+				"submitter_id"
+			],
+			[
+				"shopping",
+				"shopping_list_html"
+			],
+			[
+				"jinja",
+				"jinja_env	statement"
+			],
+			[
+				"templ",
+				"template_dir	statement"
+			],
+			[
+				"out",
+				"output_hidden	statement"
+			],
+			[
+				"output",
+				"output_items	statement"
+			],
+			[
+				"item",
+				"item_html"
+			],
+			[
+				"template",
+				"template_values	statement"
+			],
+			[
+				"user",
+				"user_name	statement"
+			],
+			[
+				"email",
+				"email_error"
+			],
+			[
+				"veri",
+				"verify_error"
+			],
+			[
+				"pass",
+				"password_error"
+			],
+			[
+				"valid_",
+				"valid_user_name	function"
+			],
+			[
+				"err",
+				"have_error"
+			],
+			[
+				"valid",
+				"valid_user_email	function"
+			],
+			[
+				"user_",
+				"user_email	statement"
+			],
+			[
+				"write",
+				"write_form	function"
+			],
+			[
+				"esca",
+				"escape_html	function"
+			],
+			[
+				"sign",
+				"signup_page	statement"
+			],
+			[
+				"rot",
+				"rot13_str"
+			],
+			[
+				"inpu",
+				"input_str	statement"
+			],
+			[
+				"wri",
+				"write_page	function"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"inline",
+				"inline"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"Thanks",
+				"ThanksHandler	class"
+			],
+			[
+				"month",
+				"month_abbvs	statement"
+			],
+			[
+				"is",
+				"isdigit"
+			],
+			[
+				"mon",
+				"month_validity	statement"
+			],
+			[
+				"do",
+				"dollars"
+			],
+			[
+				"plot",
+				"plot_title	statement"
+			],
+			[
+				"ws",
+				"ws_name	statement"
+			],
+			[
+				"mat",
+				"matplotlib	module"
+			],
+			[
+				"no",
+				"no_of_cols	statement"
+			],
+			[
+				"n",
+				"ncols"
+			],
+			[
+				"all",
+				"all_data	statement"
+			],
+			[
+				"row",
+				"row_data	statement"
+			],
+			[
+				"grid",
+				"grid_search	statement"
+			],
+			[
+				"feat",
+				"feat_ext"
+			],
+			[
+				"f_",
+				"f_train	statement"
+			],
+			[
+				"q_",
+				"q_feats	statement"
+			],
+			[
+				"s_",
+				"s_labels	statement"
+			],
+			[
+				"r",
+				"r	statement"
+			],
+			[
+				"two",
+				"two_evs	statement"
+			],
+			[
+				"train",
+				"train_q	statement"
+			],
+			[
+				"one",
+				"one_evs_ivals"
+			],
+			[
+				"seg",
+				"seg_of_dat	function"
+			],
+			[
+				"test_",
+				"test_labels	statement"
+			],
+			[
+				"tr_",
+				"tr_tr	statement"
+			],
+			[
+				"fea",
+				"feature_extractor_two	function"
+			],
+			[
+				"p_",
+				"p_labels	statement"
+			],
+			[
+				"ptr",
+				"p_tr_wise	statement"
+			],
+			[
+				"cont",
+				"cont_2_clas	function"
+			],
+			[
+				"set",
+				"set_one_tr_wise	statement"
+			],
+			[
+				"set_",
+				"set_one_dat	statement"
+			],
+			[
+				"x",
+				"xticks	function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				":la",
+				"Build With: LaTeX"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":bib",
+				"Set Syntax: BibTeX"
+			],
+			[
+				":c++",
+				"Set Syntax: C++"
+			],
+			[
+				":l",
+				"Build With: LaTeX"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				":overt",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				":latex",
+				"Build With: LaTeX"
+			],
+			[
+				":",
+				":w - Save"
+			],
+			[
+				":c",
+				"Set Syntax: C++"
+			],
+			[
+				":e",
+				":e - Revert"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"matlab",
+				"Set Syntax: MATLAB"
+			],
+			[
+				":LA",
+				"Build With: LaTeX"
+			],
+			[
+				"jin",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"jinj",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"jinja",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				":jinja",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				":jinj",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				":jin",
+				"Set Syntax: Jinja2"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				":py",
+				"Set Syntax: Python"
+			],
+			[
+				":css",
+				"Set Syntax: CSS"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				"Packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"Remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"SublimeREPL: Petite Chez Scheme"
+			],
+			[
+				":bi",
+				"Set Syntax: BibTeX"
+			],
+			[
+				":p",
+				"Build With: Python"
+			],
+			[
+				"Disa",
+				"Package Control: Disable Package"
+			],
+			[
+				":ma",
+				"Set Syntax: MATLAB"
+			],
+			[
+				":pdf",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"ardui",
+				"Set Syntax: Arduino"
+			],
+			[
+				":s",
+				":w - Save"
+			],
+			[
+				":sa",
+				":w - Save"
+			],
+			[
+				"la",
+				"Build With: LaTeX"
+			],
+			[
+				":lat",
+				"Build With: LaTeX"
+			],
+			[
+				":La",
+				"Build With: LaTeX"
+			],
+			[
+				":late",
+				"Build With: LaTeX"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"Late",
+				"Build With: LaTeX"
+			],
+			[
+				"Package",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			" import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab15 - csp/lab15.tex",
+		"/home/usman/Downloads/uas-vita/uas-vita.tex",
+		"/home/usman/Downloads/uas-vita/missfont.log",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab2 - csp/lab2.tex",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab15 - csp/num_arguments.cpp",
+		"/home/usman/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/ex1.cpp",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter1_real.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter1.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter1.aux",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/lihd.tex",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/write-up/write-up_old/thesis.tex",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/write-up/winterbottom/thesis_with_pdfcode.tex",
+		"/home/usman/Desktop/day-to-day/xml_out.txt",
+		"/home/usman/Desktop/day-to-day/background_files.py",
+		"/usr/share/backgrounds/contest/trusty.xml",
+		"/usr/share/gnome-background-properties/trusty-wallpapers.xml",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/proj/demo_source.cpp",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/write-up/write-up/tex/chapter4.tex",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/practice/header.h",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/practice/source.cpp",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/write-up/write-up/tex/chapter5.tex",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab14 - csp/lab13.tex",
+		"/home/usman/.bashrc",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/lab13.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter5.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter4.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter3.tex",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/all_events_intervals_old.py",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/all_events_intervals.py",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/english_measurements.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/english.h",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/proj1/my_header.h",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/proj1/source_demo.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/p1.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/p2.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/p3.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/proj1/header_demo.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/proj1/source files/demo_source.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab12 - csp/lab12.tex",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13 - csp/ex2.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab13",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/detection/hhb/covert.txt",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/detection/hhb/overt.txt",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/detection/o2hb/overt.txt",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/detection/o2hb/covert.txt",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab12 - csp/passing_variables_2.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab12 - csp/passing_variables.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab12 - csp/circlearea.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab12 - csp/circarea.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab11 - csp/lab11.tex",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab12 - csp/simple.cpp",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/lihd/tex/chapter1.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/lihd/preamble.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/bibliography.bib",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/chapter1_old.tex",
+		"/home/usman/Downloads/feedback/introduction.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/bibliography_old.bib",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/lab10.tex",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/write-up/latex-thesis-template/thesis.tex",
+		"/mnt/01D03785344130D0/Neuroscience Lectures/brain_talks.txt",
+		"/mnt/01D03785344130D0/Neuroscience Lectures/ai_talks.txt",
+		"/home/usman/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/subj_wise.py",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/thesis.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/humanDetection_HOG_S.m",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/ex2.cpp",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/write",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/write-up/write-up/thesis.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/tex/chapter1_old.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/humanDetection_DPM_S.m",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/humanDetection_opticalFlow_S.m",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/humanaDetection_ROC_S.m",
+		"/usr/local/MATLAB/MATLAB_Production_Server/R2013a/toolbox/nnet/nnet/nnplot/plotroc.m",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/humanDetection_ACF_S.m",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/Datasets/INRIAPerson/70X134H96/Test/pos/crop001501a.png",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/Code_Sent/Datasets/INRIAPerson/Train/neg/00000003a.png",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/oht1/p4.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/p1.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/p2.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/ex4.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/ex3.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab11 - csp/lab10.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/writeup/notes/intro.tex",
+		"/mnt/01D03785344130D0/Video_Lectures_And_Tutorials/[Coursera] Machine Learning/Programming Exercises/ml-projects-01/Completed/Week 7/mlclass-ex6-006/mlclass-ex6-006/mlclass-ex6/ex6_spam.m",
+		"/mnt/01D03785344130D0/Neuroscience Lectures/lllist.txt",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab3 - csp/lab3.tex",
+		"/mnt/01D03785344130D0/Neuroscience Lectures/llinks.txt",
+		"/mnt/01D03785344130D0/Neuroscience Lectures/list_of_links.txt",
+		"/mnt/01D03785344130D0/Neuroscience Lectures/ted_list.txt",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/ex3.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab10 - csp/ex1.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab6 - csp/lab6.tex",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/ex2.cpp",
+		"/mnt/01D03785344130D0/TA-ship/csp labs/lab7 - csp/lab7.tex",
+		"/mnt/01D03785344130D0/light-invariant-human-detection/thesis.tex",
+		"/home/usman/Code_Sent/humanDetection_opticalFlow_S.m",
+		"/home/usman/Code_Sent/humanDetection_HOG_S.m",
+		"/home/usman/Code_Sent/humanDetection_DPM_S.m",
+		"/home/usman/Code_Sent/humanDetection_ACF_S.m",
+		"/home/usman/Code_Sent/humanaDetection_ROC_S.m",
+		"/home/usman/Code_Sent/train_our_model_S.m",
+		"/mnt/01D03785344130D0/csp labs/oht1/q3.cpp",
+		"/mnt/01D03785344130D0/csp labs/oht1/p6.cpp",
+		"/mnt/01D03785344130D0/csp labs/oht1/p5.cpp",
+		"/mnt/01D03785344130D0/csp labs/oht1/p4.cpp",
+		"/mnt/01D03785344130D0/csp labs/lab9 - csp/ex4.cpp",
+		"/mnt/01D03785344130D0/csp labs/lab9 - csp/while_do.cpp",
+		"/home/usman/Desktop/multiplier.cpp",
+		"/mnt/01D03785344130D0/csp labs/lab9 - csp/lab9.tex",
+		"/home/usman/Downloads/google_appengine_new/plo-analysis/xlrd/sheet.py",
+		"/home/usman/Downloads/google_appengine_new/plo-analysis/xlrd/book.py",
+		"/mnt/01D03785344130D0/plo-analysis/student_manage/read_files.py",
+		"/home/usman/Downloads/google_appengine_new/sample_project/plo-analysis.py",
+		"/mnt/01D03785344130D0/Video_Lectures_And_Tutorials/[Udacity] Web Development/Projects/chap 1 problems/main.py",
+		"/home/usman/Downloads/google_appengine_new/plo-analysis/plo-analysis.py",
+		"/mnt/01D03785344130D0/Video_Lectures_And_Tutorials/Fundamentals of Neuroscience [HarvardX]/download_them.txt",
+		"/mnt/01D03785344130D0/vimeo-downloader/download_them.txt",
+		"/mnt/01D03785344130D0/vimeo-downloader/vimeo_downloader.sh",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/subj_wise_3d_grid_search.py",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/pair-wise/o2hb/covert_pair_wise_unshuffled_3d_grid_search.txt",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/feature_extractor.py",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/pair-wise/o2hb/overt_pair_wise_unshuffled_3d_grid_search.txt",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/pair-wise/hhb/overt_pair_wise_unshuffled_3d_grid_search.txt",
+		"/mnt/01D03785344130D0/csp labs/lab8 - csp/lab8.tex",
+		"/mnt/01D03785344130D0/csp labs/lab8 - csp/lab7.tex",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/results/pair-wise/hhb/covert_pair_wise_unshuffled_3d_grid_search.txt",
+		"/mnt/01D03785344130D0/MS Thesis/thesis/new/py/feature_extractor_two.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"detection_comp",
+			"yoo",
+			"zhang",
+			"huang",
+			"li",
+			"zhang",
+			"chen",
+			"Declare",
+			"generic",
+			"svm",
+			"zhang",
+			"lin",
+			"wang",
+			"zhong",
+			"yang",
+			"efros",
+			"candamo",
+			"histogram",
+			"r",
+			"deformable",
+			"variants",
+			"only",
+			"a rest",
+			"start",
+			"pause",
+			"start",
+			"idle",
+			"engl_add(dist1, dist2)",
+			"Min",
+			"you",
+			"your",
+			"\"",
+			"builder",
+			"computational",
+			"document",
+			"cite",
+			"bib",
+			"\\",
+			"plotRoc",
+			"\\",
+			"svm",
+			"\\",
+			"/",
+			"\\",
+			"method",
+			"vol",
+			"dining",
+			"cuboid",
+			"Cell",
+			"'Cell'",
+			"Cell",
+			"sd",
+			"webm",
+			"mp4",
+			"c[U,L,R,D,F,B]",
+			"(?:c[A-Z])",
+			"render_post",
+			"verify",
+			"eerror",
+			"uerror",
+			"perror",
+			"dperror",
+			"perror",
+			"uerror",
+			"dperror",
+			"file:///home/usman/Downloads/plo-portal/plo-main.html",
+			"#menu",
+			"row",
+			"french",
+			"LDA",
+			"\\emph",
+			"url",
+			"coyle",
+			"differentiate",
+			"O2Hb",
+			"HHb",
+			"pca",
+			"lda",
+			"flda",
+			"svm",
+			"used",
+			"cell",
+			"overt/covert",
+			"overt",
+			"data-set",
+			"feature-set",
+			"feature space",
+			"feature-",
+			"feature space",
+			"section",
+			"studies",
+			"has",
+			"have",
+			"channel",
+			"multiple",
+			"multi",
+			"siu",
+			"farina",
+			"pre-",
+			"coyle",
+			"using",
+			"barnes",
+			"add",
+			"(b)",
+			"(a)",
+			"cruk",
+			"brain_lobes",
+			"brain_stem_2",
+			"coyle",
+			"based",
+			"baseed",
+			"during",
+			"ruin",
+			"acknowledgment",
+			"Broca",
+			"hull",
+			"functional",
+			"Figure",
+			"Fig.",
+			"table",
+			"up",
+			"emph",
+			"cur",
+			"caret",
+			"sincere",
+			"a ",
+			"a",
+			"Non"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "exercise_1.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 102.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

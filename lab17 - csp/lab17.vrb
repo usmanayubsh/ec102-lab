@@ -1,0 +1,25 @@
+\frametitle{Reading Multiple Lines}
+\subsection{Reading Multiple Lines} % (fold)
+\label{sub:reading_multiple_lines}
+\begin{itemize}
+    \item The third argument of \texttt{cin.get()} specifies the character that tells the function to stop reading
+    \item The default value of this argument is the newline
+    \item The following example overrides the default value by `\$'
+\end{itemize}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// reads multiple lines, terminates on \$ character
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int MAX = 2000;
+    char str[MAX];
+    cout << "\nEnter a string:\n";
+
+    cin.get(str, MAX, '$'); // terminate with $
+    cout << "You entered:\n" << str << endl;
+    return 0;
+}
+\end{lstlisting}

@@ -1,0 +1,11 @@
+\frametitle{My First Project}
+    Step \# 8: Now that environment has been prepared, let's write our first program. Double-click the cpp file that you have created in Step 5 and start programming.
+    \begin{lstlisting}[language=C++, basicstyle=\ttfamily,keywordstyle=\color{blue}]
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout << "This is my first program!";
+        cout << endl;
+        return 0;
+    }\end{lstlisting}

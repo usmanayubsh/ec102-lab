@@ -1,0 +1,12 @@
+\frametitle{Solved Example}
+    \lstset{style=mystyle}
+    \begin{lstlisting} [firstnumber=21]
+    case 'F' :
+        cout << "Better try again" << endl;
+        break;
+    default :
+        cout << "Invalid grade" << endl;
+    }
+    return 0;
+}
+\end{lstlisting}

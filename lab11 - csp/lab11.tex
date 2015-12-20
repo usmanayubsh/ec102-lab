@@ -1,0 +1,182 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\title{Lab \# 10: Enumerations}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+
+\begin{frame}
+    \frametitle{Enumerations -- Introduction}
+    \section{Enumerations} % (fold)
+    \label{sec:enumerations}
+    \subsection{Introduction} % (fold)
+    \label{sub:introduction}
+    \begin{itemize}
+        \item Another approach to defining your own data type
+        \item When we know in advance a \textbf{finite} list of values that a data type can take on
+        \item Example: A data type representing days of the week
+        \item In an enumeration, we must give a specific name to every possible value
+        \item These permissible values of an enumeration are known as \textbf{enumerators}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Enumerations -- Syntax}
+    \subsection{Syntax} % (fold)
+    \label{sub:syntax}
+    \begin{itemize}
+        \item An \texttt{enum} declaration defines the set of all names that will be permissible values of the type
+        \lstset{style=mystyle}
+\begin{lstlisting}
+enum days_of_the_week {Sun, Mon, Tue, Wed, Thu, Fri, Sat};
+\end{lstlisting}
+        \item In this example, the \texttt{enum} type \texttt{days\_of\_the\_week} has seven enumerators: Sun, Mon, Tue and so on up to Sat
+        \item Once \texttt{enum} type \texttt{days\_of\_the\_week} has been declared as shown, the variables of this type can be defined as follows:
+        \lstset{style=mystyle}
+\begin{lstlisting}
+days_of_the_week day1, day2;
+\end{lstlisting}
+        \item Variables of an enumerated type, like \texttt{day1} and \texttt{day2} can be given any of the values listed in the enum declaration
+        \item Values that weren't listed in the declaration cannot be used
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Enumerations -- Other Features}
+    \subsection{Other Features} % (fold)
+    \label{sub:other_features}
+    \begin{itemize}
+        \item Enumerations are treated internally as integers
+        \item We can use standard arithmetic operators on standard \texttt{enum} types
+        \lstset{style=mystyle}
+\begin{lstlisting}
+day1 = Mon;
+day2 = Thu;
+
+int diff = day2 - day1;
+
+cout << "Days between = " << diff << endl;
+\end{lstlisting}
+        \item We can also use comparison operators
+        \lstset{style=mystyle}
+\begin{lstlisting}
+if(day1 < day2)
+{
+    cout << day1 << " comes before " << day2 << endl;
+}
+\end{lstlisting}
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Solved Example}
+    \section{Solved Example} % (fold)
+    \label{sec:solved_example}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates enum types
+#include <iostream>
+using namespace std;
+
+enum days_of_the_week
+{
+    Sun = 1,
+    Mon = 2,
+    Tue = 3,
+    Wed = 4,
+    Thu = 6,
+    Fri = 7,
+    Sat = 8
+};
+
+int main()
+{
+    days_of_the_week day1, day2;
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Solved Example}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=19]
+    day1 = Mon;
+    day2 = Thu;
+
+    int diff = day2 - day1; // integer arithmetic
+    cout << "Days between = " << diff << endl;
+    if (day1 < day2) // can do comparisons
+    {
+        cout << "day1 comes before day2" << endl;
+    }
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,19 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Relational Operators}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Importance}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Definition}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Examples}{5}{0}{1}
+\beamer@subsectionintoc {1}{4}{Relational Operators in C++}{7}{0}{1}
+\beamer@sectionintoc {2}{Logical Operators}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Importance}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Definition}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Logical Operators in C++}{10}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{1}{AND Operator}{11}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{2}{OR Operator}{12}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{3}{NOT Operator}{13}{0}{2}
+\beamer@subsectionintoc {2}{4}{Examples}{14}{0}{2}
+\beamer@sectionintoc {3}{Decision Making in C++}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Introduction}{15}{0}{3}
+\beamer@subsectionintoc {3}{2}{Decision Making in C++}{16}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{The \texttt {if} Statement}{17}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{2}{The \texttt {if...else} Statement}{19}{0}{3}

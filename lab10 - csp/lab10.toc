@@ -1,0 +1,17 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Structures}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Why?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{What?}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{How?}{7}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{1}{A Simple Structure}{7}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{2}{Defining the Structure}{8}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{3}{Defining Structure Variables}{10}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{4}{Accessing Structure Members}{11}{0}{1}
+\beamer@sectionintoc {2}{Other Structure Features}{13}{0}{2}
+\beamer@sectionintoc {3}{Solved Examples}{14}{0}{3}
+\beamer@subsectionintoc {3}{1}{Solved Example 1}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Solved Example 2}{16}{0}{3}
+\beamer@subsectionintoc {3}{3}{Solved Example 3}{18}{0}{3}
+\beamer@sectionintoc {4}{Exercises}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{Exercise 1}{20}{0}{4}
+\beamer@subsectionintoc {4}{2}{Exercise 2}{21}{0}{4}

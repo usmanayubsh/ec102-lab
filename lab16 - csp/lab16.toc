@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Arrays}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Why?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{What?}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{How?}{5}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{1}{Defining Array}{6}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{2}{Array Elements}{6}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{3}{Accessing Array Elements}{6}{0}{1}
+\beamer@sectionintoc {2}{Solved Examples}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Averaging Array Elements}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Initializing Arrays}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Multi-dimensional Arrays}{11}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{1}{Defining Multi-dimensional Array}{13}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{2}{Accessing Multi-dimensional Array Elements}{13}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{3}{Initializing Multi-dimensional Arrays}{14}{0}{2}
+\beamer@sectionintoc {3}{Exercise}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Exercise 1}{15}{0}{3}
+\beamer@subsectionintoc {3}{2}{Exercise 2}{16}{0}{3}

@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Basics of a Typical C++ Environment}{3}{0}{1}
+\beamer@sectionintoc {2}{First Program in C++}{4}{0}{2}
+\beamer@sectionintoc {3}{Arithmetic Operators}{6}{0}{3}
+\beamer@sectionintoc {4}{Fundamental C++ Data Types}{7}{0}{4}
+\beamer@sectionintoc {5}{Keywords in C++}{11}{0}{5}
+\beamer@sectionintoc {6}{Stream I/O}{13}{0}{6}
+\beamer@sectionintoc {7}{Assignment Statements}{14}{0}{7}
+\beamer@sectionintoc {8}{Solved Examples}{15}{0}{8}

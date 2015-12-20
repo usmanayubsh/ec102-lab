@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Reference Arguments}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Definition}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Passing by Value vs Passing by Reference}{4}{0}{1}
+\beamer@sectionintoc {2}{Solved Example}{6}{0}{2}
+\beamer@sectionintoc {3}{Exercise}{8}{0}{3}

@@ -1,0 +1,24 @@
+\frametitle{The \texttt{if...else} Statement}
+    \textbf{Code}
+    \lstset{style=mystyle}
+    \begin{lstlisting}
+// this program demonstrates IF statement
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    cout << "Enter a number: ";
+    cin >> x;
+
+    if(x > 100)
+    {
+        cout << "That number is greater than 100\n";
+    }
+    else
+    {
+        cout << "The number is not greater than 100\n";
+    }
+    return 0;
+}\end{lstlisting}
+

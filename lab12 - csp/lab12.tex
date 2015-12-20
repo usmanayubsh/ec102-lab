@@ -1,0 +1,382 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\title{Lab \# 11: Functions - I}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+
+\begin{frame}
+    \frametitle{What are Functions?}
+    \section{Introduction to Functions} % (fold)
+    \label{sec:functions}
+    \subsection{What?} % (fold)
+    \label{sub:what}
+    \begin{itemize}
+        \item Groups a number of program statements into a unit and gives it a name
+        \item This unit can then be invoked from other parts of the program
+        \item So far, we have studied only one function i.e. \texttt{main()} function
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why Use Functions?}
+    \subsection{Why?} % (fold)
+    \label{sub:why}
+    \begin{itemize}
+        \item To aid in the conceptual organization of a program
+        \item To reduce program size
+        \item The function's code is stored in only one place in memory
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Why Use Functions?}
+    Write a C++ program that displays the following table to the console
+    \lstset{style=mystyle}
+\begin{lstlisting}
+*********************************************
+Data-type  Range
+*********************************************
+char       -128 to 127
+short      -32,768 to 32,767
+int        System dependent
+long       -2,147,483,648 to 2,147,483,647
+*********************************************
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{A Simple Function}
+    \subsection{How?} % (fold)
+    \label{sub:how}
+    \subsubsection{A Simple Function} % (fold)
+    \label{ssub:a_simple_function}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates a simple function
+#include <iostream>
+using namespace std;
+
+void starline(); // function declaration
+
+int main()
+{
+    starline();
+    cout << "Data-type  Range" << endl;
+    starline(); // call to function
+
+    cout << "char    -128 to 127" << endl;
+    cout << "short   -32,768 to 32,767" << endl;
+    cout << "int     System dependent" << endl;
+    cout << "long    -2,147,483,648 to 2,147,483,647" << endl;
+    starline();
+
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{A Simple Function}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+// function definition
+void starline() // function declarator
+{               // function body starts here
+    for(int j = 0; j < 45; j++)
+    {
+        cout << "*";
+    }
+    cout << endl;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{The Function Declaration}
+    \subsubsection{The Function Declaration} % (fold)
+    \label{ssub:the_function_declaration}
+    \begin{itemize}
+        \item Also known as a prototype
+        \item Just as a variable can't be used without telling the compiler what it is, functions also need to be declared before they are called
+        \lstset{style=mystyle}
+\begin{lstlisting}
+void starline();
+\end{lstlisting}
+    \item Tells the compiler that at some later point we plan to present a function called \texttt{starline}
+    \item The keyword \texttt{void} specifies that the function has no return value and the empty parentheses indicate that it takes no arguments
+    \item Is terminated by a semicolon
+    \item The information in the declaration is also sometimes referred to as the function \textbf{signature}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Calling the Function}
+    \subsubsection{Calling the Function} % (fold)
+    \label{ssub:calling_the_function}
+    \begin{itemize}
+        \item The function is called/invoked as follows:
+        \lstset{style=mystyle}
+\begin{lstlisting}
+starline();
+\end{lstlisting}
+    \item The function name followed by parentheses
+    \item The syntax is very similar to that of the declaration except that the return type is not used
+    \item Terminated by a semicolon
+    \item Executing the call statement causes the function to be executed i.e. control is transferred to the function
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{The Function Definition}
+    \subsubsection{The Function Definition} % (fold)
+    \label{ssub:the_function_definition}
+    \begin{itemize}
+        \item The definition contains the \textbf{actual code} for the function
+        \item Here goes the definition for \texttt{starline()}:
+        \lstset{style=mystyle}
+\begin{lstlisting}
+void starline()
+{
+    for(int j = 0; j < 45; j++)
+    {
+        cout << "*";
+    }
+    cout << endl;
+}
+\end{lstlisting}
+        \item The definition consists of a line called the \textbf{declarator}, followed by the function \textbf{body}
+        \item The function body is composed of the statements that make up the function and is delimited by braces
+        \item The declarator must agree with the declaration and is \textbf{not} terminated by a semicolon
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Comparison with Library Functions}
+    \section{Comparison with Library Functions} % (fold)
+    \label{sec:comparison_with_library_functions}
+    \begin{itemize}
+        \item For a library function, we don't need to write the declaration or definition
+        \lstset{style=mystyle}
+\begin{lstlisting}
+pow(2, 4);
+\end{lstlisting}
+        \item The declaration is in the header file specified at the beginning of the program e.g. \texttt{cmath} for \texttt{pow} function
+        \item The definition is in a library file that's linked automatically to our program when we build it
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Passing Arguments to Functions}
+    \section{Passing Arguments to Functions} % (fold)
+    \label{sec:passing_arguments_to_functions}
+    \begin{itemize}
+        \item An argument is a piece of data passed from a program to the function
+        \item Arguments allow a function to operate with different values
+        \item By using arguments, we can create a function that prints any character any number of times
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Constants as Arguments}
+    \subsection{Passing Constants} % (fold)
+    \label{sub:passing_constants}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates function arguments
+#include <iostream>
+using namespace std;
+
+void rep_char(char, int); // function declaration
+
+int main()
+{
+    rep_char('-', 45);
+    cout << "Data-type  Range" << endl;
+    rep_char('-', 45); // call to function
+
+    cout << "char    -128 to 127" << endl;
+    cout << "short   -32,768 to 32,767" << endl;
+    cout << "int     System dependent" << endl;
+    cout << "long    -2,147,483,648 to 2,147,483,647" << endl;
+    rep_char('=', 45);
+
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Constants as Arguments}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+void rep_char(char ch, int n)
+{
+    for(int j = 0; j < n; j++)
+    {
+        cout << ch;
+    }
+    cout << endl;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Variables as Arguments}
+    \subsection{Passing Variables} % (fold)
+    \label{sub:passing_variables}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates function arguments
+#include <iostream>
+using namespace std;
+
+void rep_char(char, int); // function declaration
+
+int main()
+{
+    char chin;
+    int nin;
+
+    cout << "Enter a character: ";
+    cin >> chin;
+    cout << "Enter number of times to repeat it: ";
+    cin >> nin;
+
+    rep_char(chin, nin);
+
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Variables as Arguments}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+void rep_char(char ch, int n)
+{
+    for(int j = 0; j < n; j++)
+    {
+        cout << ch;
+    }
+    cout << endl;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Structures as Arguments}
+    \subsection{Passing Structures} % (fold)
+    \label{sub:passing_structures}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates passing structure as argument
+#include <iostream>
+using namespace std;
+struct Distance
+{
+    int feet;
+    float inches;
+};
+
+void engldisp(Distance);
+
+int main()
+{
+    Distance d1, d2;
+    cout << "Enter feet: "; cin >> d1.feet;
+    cout << "Enter inches: "; cin >> d1.inches;
+    cout << "\nEnter feet: ";
+    cin >> d2.feet;
+    cout << "Enter inches: ";
+    cin >> d2.inches;
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Structures as Arguments}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+    cout << "\nd1 = ";
+    engldisp(d1);
+    cout << "\nd2 = ";
+    engldisp(d2);
+    cout << endl;
+    return 0;
+}
+
+void engldisp(Distance dd)
+{
+    cout << dd.feet << "\'-" << dd.inches << "\"";
+}
+\end{lstlisting}
+\end{frame}
+
+\end{document}

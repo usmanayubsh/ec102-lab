@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Setting Up Integrated Development Environment}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{What is IDE?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Downloading Setup Files}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Installing the IDE}{6}{0}{1}
+\beamer@sectionintoc {2}{My First Project}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Creating a New Project}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Adding Files to the Project}{16}{0}{2}

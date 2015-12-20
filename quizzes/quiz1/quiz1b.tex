@@ -1,0 +1,94 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\usepackage{datetime}
+\newdate{date}{3}{12}{2015}
+
+\title{Quiz \# 1 (B)}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\displaydate{date}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Quiz \# 1 (B)}
+\section{Quiz} % (fold)
+\label{sec:quiz}
+Write a recursive function \texttt{power(base, exponent)} that,
+\begin{itemize}
+    \item When invoked, returns $base^{exponent}$ \\
+    \item \textit{Hint}:
+    \begin{itemize}
+        \item The recursion step would use the relationship \\
+        \begin{center}
+            $base^{exponent} = base \cdot base^{exponent - 1}$ and
+        \end{center}
+        \item Terminating condition occurs when \texttt{exponent} is equal to 1, because \\
+        \begin{center}
+            $base^1 = base$
+        \end{center}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}

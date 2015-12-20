@@ -1,0 +1,379 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\usepackage{datetime}
+\newdate{date}{14}{12}{2015}
+
+\title{Lab \# 15: Arrays and Strings -- Part 1}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\displaydate{date}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+
+\begin{frame}\frametitle{Why Array?}
+    \section{Arrays} % (fold)
+    \label{sec:arrays}
+    \subsection{Why?} % (fold)
+    \label{sub:why_}
+    \begin{itemize}
+        \item In everyday life, we commonly \textbf{group} similar objects into units
+        \begin{itemize}
+            \item A crate of peas, and
+            \item A dozen of eggs
+         \end{itemize}
+        \item In computer programs, we also need to group together data items \textbf{of the same type}
+        \item The most basic mechanism that accomplishes this in C++ is the \textbf{array}
+        \item The data items grouped in an array can be simple types such \texttt{int}, \texttt{float} or they can be user-defined types such as structures
+    \end{itemize}
+    % subsection why (end)
+    % section arrays (end)
+\end{frame}
+
+\begin{frame}\frametitle{What is an Array?}
+    \subsection{What?} % (fold)
+    \label{sub:what_}
+    \begin{itemize}
+        \item Like structures, arrays also group a number of items into a larger unit
+        \item But while structures usually group items of different types, an array groups items of the same type
+        \item Whereas items in a structure are accessed by name, those in an array \textbf{are accessed by an index number}
+    \end{itemize}
+    % subsection what_ (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{A Simple Program Using Array}
+    \subsection{How?} % (fold)
+    \label{sub:how_}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// gets four ages from user and displays them
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age[4];
+    for(int j = 0; j < 4; j++)
+    {
+        cout << "Enter an age: ";
+        cin >> age[j];
+    }
+
+    for(int j = 0; j < 4; j++)
+    {
+        cout << "You entered: " << age[j] << endl;
+    }
+    return 0;
+}
+\end{lstlisting}
+    % subsection how_ (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{A Simple Program Using Array}
+    \subsubsection{Defining Array} % (fold)
+    \label{ssub:defining_array}
+    \textbf{Defining Array:} \\
+    \begin{itemize}
+        \item An array must be defined before it can be used
+        \item An array definition specifies \textbf{a variable type} and \textbf{a name}
+        \item Unlike variable definitions, it includes another feature: \textbf{a size}
+        \begin{center}
+            \texttt{int age[4];}
+        \end{center}
+    \end{itemize}
+    % subsubsection defining_arrays (end)
+
+    \subsubsection{Array Elements} % (fold)
+    \label{ssub:array_elements}
+    \textbf{Array Elements:} \\
+    \begin{itemize}
+        \item The items in an array
+        \item All the elements in an array are of the \textbf{same type}
+        \item The first element is numbered \texttt{0}
+    \end{itemize}
+    % subsubsection array_elements (end)
+
+    \subsubsection{Accessing Array Elements} % (fold)
+    \label{ssub:accessing_array_elements}
+    \textbf{Accessing Array Elements:} \\
+    \begin{itemize}
+         \item Name of the array followed by brackets delimiting a variable or a constant known as the \textbf{array index}
+         \item \texttt{age[j]} refers to the $j^{th}$ element of the array \texttt{age}
+     \end{itemize}
+    % subsubsection accessing_array_elements (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Averaging Array Elements}
+    \section{Solved Examples} % (fold)
+    \label{sec:solved_examples}
+    \subsection{Averaging Array Elements} % (fold)
+    \label{sub:averaging_array_elements}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// averages a weeks's sales
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int SIZE = 6;
+    double sales[SIZE];
+
+    cout << "Enter widget sales for 6 days:\n";
+    for (int j = 0; j < SIZE; j++)
+        cin >> sales[j];
+
+    double total = 0;
+    for (int j = 0; j < SIZE; j++)
+        total += sales[j];
+
+    cout << "Average: " << total / SIZE << endl;
+    return 0;
+}
+\end{lstlisting}
+    % subsection averaging_array_elements (end)
+    % section solved_examples (end)
+\end{frame}
+
+\begin{frame}\frametitle{Averaging Array Elements}
+    \begin{itemize}
+        \item Using a variable (\texttt{SIZE}) makes it easier to change the array size
+        \item Only one program line needs to be changed to change the array size, loop limits and anywhere else the array size appears
+        \item Using all upper-case name reminds us that the variable cannot be modified in the program
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Initializing Arrays}
+    \subsection{Initializing Arrays} % (fold)
+    \label{sub:initializing_arrays}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// shows days from start of the year to date specified
+#include <iostream>
+using namespace std;
+int main()
+{
+    int month, day, total_days;
+    int days_per_month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    cout << "Enter month (1 to 12): ";
+    cin >> month;
+    cout << "Enter day (1 to 31): ";
+    cin >> day;
+    total_days = day;
+    for (int j = 0; j < month - 1; j++)
+        total_days += days_per_month[j];
+    cout << "Total days from start of the year is: " << total_days << endl;
+    return 0;
+}
+\end{lstlisting}
+    % subsection initializing_arrays (end)
+\end{frame}
+
+\begin{frame}\frametitle{Initializing Arrays}
+    \begin{itemize}
+        \item The values to which an array is initialized \textbf{are surrounded by braces} and \textbf{are separated by commas}
+        \begin{center}
+            \texttt{int days\_per\_month[12] = \{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31\};}
+        \end{center}
+        \item What happens if you do use an explicit array size but it does not agree with the number of initializers?
+        \begin{itemize}
+            \item If there are too few initializers, \textbf{the missing elements will be set to \texttt{0}}
+            \begin{center}
+                \texttt{int days\_per\_month[12] = \{31, 28, 31, 30, 31, 30, 31\};}
+            \end{center}
+            In this case, \texttt{days\_per\_month[7]} to \texttt{[11]} will all be set to \texttt{0}
+            \item If there are too many, \textbf{an error is signaled}
+            \begin{center}
+                \texttt{int days\_per\_month[12] = \{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, {\color{red}{30, 31, 30, 31}}\};}
+            \end{center}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Multi-dimensional Arrays}
+    \subsection{Multi-dimensional Arrays} % (fold)
+    \label{sub:multi_dimensional_arrays}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// displays sales chart using 2-d array
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+const int DISTRICTS = 4; // array dimensions
+const int MONTHS = 3;
+
+int main()
+{
+    int d, m;
+    double sales[DISTRICTS][MONTHS]; // 2-d array defintion
+    cout << endl;
+    for (d = 0; d < DISTRICTS; d++)
+        for (m = 0; m < MONTHS; m++)
+        {
+            cout << "Enter sales for district " << d + 1;
+            cout << ", month " << m + 1 << ": ";
+            cin >> sales[d][m];
+        }
+\end{lstlisting}
+    % subsection multi_dimensional_arrays (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Multi-dimensional Arrays}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+    cout << "\n\n";
+    cout << "                        Month\n";
+    cout << "                1         2         3";
+    for (d = 0; d < DISTRICTS; d++)
+    {
+        cout << "\nDistrict " << d + 1;
+        for (m = 0; m < MONTHS; m++)
+        {
+            cout << setw(10) << sales[d][m];
+        }
+    }
+    cout << endl;
+    return 0;
+}
+\end{lstlisting}
+    % subsection multi_dimensional_arrays (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Multi-dimensional Arrays}
+    \subsubsection{Defining Multi-dimensional Array} % (fold)
+    \label{ssub:defining_multi_dimensional_arrays}
+    \textbf{Defining Multi-dimensional Arrays:} \\
+    \begin{itemize}
+        \item It is an array of \texttt{DISTRICTS} elements, each of which is an array of \texttt{MONTHS} elements
+        \begin{center}
+            \texttt{double sales[DISTRICTS][MONTHS];}
+        \end{center}
+        \item There can be arrays of more than two dimensions e.g. a three dimensional array is an array of arrays of arrays
+    \end{itemize}
+    % subsubsection defining_multi_dimensional_arrays (end)
+
+    \subsubsection{Accessing Multi-dimensional Array Elements} % (fold)
+    \label{ssub:accessing_multi_dimensional_array_elements}
+    \textbf{Accessing Array Elements:} \\
+    \begin{itemize}
+        \item Each index has its own set of brackets
+        \begin{center}
+            \texttt{sales[d][m]}
+        \end{center}
+        \item Commas are not used
+     \end{itemize}
+    % subsubsection accessing_multi_dimensional_array_elements (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Multi-dimensional Arrays}
+    \subsubsection{Initializing Multi-dimensional Arrays} % (fold)
+    \label{ssub:initializing_multi_dimensional_arrays}
+    \textbf{Initializing Multi-dimensional Arrays:} \\
+    The initializing values for each sub-array are enclosed in braces and separated by commas
+    \lstset{style=mystyle}
+            \begin{lstlisting}
+    double sales[DISTRICTS][MONTHS] = {
+        {1432.07, 234.50, 654.01},
+        {322.00, 13838.32, 17589.88},
+        {9328.34, 934.00, 4492.30},
+        {12838.29, 2332.63, 32.93}
+    };
+\end{lstlisting}
+    % subsubsection initializing_multi_dimensional_arrays (end)
+\end{frame}
+
+\begin{frame}\frametitle{Exercise 1}
+\section{Exercise} % (fold)
+\label{sec:exercise}
+\subsection{Exercise 1} % (fold)
+\label{sub:exercise_1}
+Write a program that:
+\begin{itemize}
+    \item Declares an array containing ten elements from 1 to 10
+    \item Multiplies the number entered by the user with this array, and
+    \item Displays the output
+\end{itemize}
+% subsection exercise_1 (end)
+\end{frame}
+
+\begin{frame}\frametitle{Exercise 2}
+\subsection{Exercise 2} % (fold)
+\label{sub:exercise_2}
+Write a program that:
+\begin{itemize}
+    \item Asks the user to enter 5 numbers
+    \item Writes those numbers to an array
+    \item Arranges the elements of the array in ascending order, and
+    \item Displays the array
+\end{itemize}
+% subsection exercise_1 (end)
+\end{frame}
+
+\end{document}

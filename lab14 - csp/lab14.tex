@@ -1,0 +1,173 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\usepackage{datetime}
+\newdate{date}{20}{11}{2015}
+
+\title{Lab \# 13: Functions - III}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\displaydate{date}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reference Arguments}
+    \section{Reference Arguments} % (fold)
+    \label{sec:reference_arguments}
+    \subsection{Definition} % (fold)
+    \label{sub:def}
+    \begin{itemize}
+        \item An alias, a different name for a variable
+        \item One of the most important uses is in passing arguments to functions
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Passing by Value vs Passing by Reference}
+    \subsection{Passing by Value vs Passing by Reference} % (fold)
+    \label{subsec:passing_by_ref}
+    \begin{itemize}
+        \item When arguments are passed by value, the called function creates a new variable of the same type as the argument and assigns the argument's value to it
+        \item The function cannot access the original variable in the calling program, only the copy it created
+        \item It is useful when the function does not need to modify the original variable in the calling program
+        \item It offers insurance that the function cannot harm the original value
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Passing by Value vs Passing by Reference}
+    \begin{itemize}
+        \item Passing arguments by reference uses a different mechanism
+        \item Instead of a value being passed to a function, a reference to the original variable, in the calling program, is passed
+        \item An important advantage is that the function can access the actual variables in the calling program
+        \item Provides a mechanism for passing more than one value from the function back to the calling program
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Simple Data Types by Reference}
+    \section{Solved Example} % (fold)
+    \label{sec:solved_example}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// ref.cpp
+// demonstrates passing by reference
+#include <iostream>
+using namespace std;
+void intfrac(float, int&, float&); //declaration
+
+int main()
+{
+    float number, fracpart;
+    int intpart;
+
+    do {
+        cout << "\nEnter a real number: "; //number from user
+        cin >> number;
+        intfrac(number, intpart, fracpart); //find int and frac
+        cout << "Integer part is " << intpart //print them
+        << ", fraction part is " << fracpart << endl;
+    } while( number != 0.0 ); //exit loop on 0.0
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Passing Simple Data Types by Reference}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+// intfrac()
+// finds integer and fractional parts of real number
+void intfrac(float n, int& intp, float& fracp)
+{
+    intp = n;
+    fracp = n - intp; //subtract integer part
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise}
+    \section{Exercise} % (fold)
+    \label{sec:exercise}
+    Write a function that
+    \begin{itemize}
+        \item takes a reference to a binary number (base 2) as an argument, and
+        \item converts that number to a decimal number (base 10).
+    \end{itemize}
+    Write a program that
+        \begin{itemize}
+            \item exercises this function by obtaining a binary number from the user,
+            \item and printing out the equivalent decimal number.
+        \end{itemize}
+    % section exercise (end)
+\end{frame}
+
+\end{document}

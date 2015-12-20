@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Returning Values from Functions}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{The \texttt {return} Statement}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Eliminating Unnecessary Variables}{7}{0}{1}
+\beamer@sectionintoc {2}{Returning Structure Variables}{8}{0}{2}
+\beamer@sectionintoc {3}{Exercises}{12}{0}{3}
+\beamer@subsectionintoc {3}{1}{Exercise 1}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Exercise 2}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{Exercise 3}{14}{0}{3}

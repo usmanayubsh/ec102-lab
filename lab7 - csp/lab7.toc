@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Introduction to Loops}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Loops in C++}{4}{0}{1}
+\beamer@sectionintoc {2}{The \texttt {for} loop}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Syntax}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Solved Examples}{7}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{1}{Solved Example 1}{7}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{2}{Solved Example 2}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Variation in \texttt {for} loop}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{The \texttt {break} Statement}{10}{0}{2}
+\beamer@subsectionintoc {2}{5}{The \texttt {continue} Statement}{11}{0}{2}
+\beamer@sectionintoc {3}{Exercises}{12}{0}{3}

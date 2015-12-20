@@ -1,0 +1,13 @@
+\beamer@slide {sec:passing_arrays_to_functions}{3}
+\beamer@slide {sub:function_declaration_with_array_arguments}{5}
+\beamer@slide {sub:function_call_with_array_arguments}{5}
+\beamer@slide {sub:function_definition_with_array_arguments}{5}
+\beamer@slide {sec:arrays_of_structures}{6}
+\beamer@slide {sec:strings}{9}
+\beamer@slide {sub:introduction}{9}
+\beamer@slide {sub:avoiding_buffer_overflow}{10}
+\beamer@slide {sub:string_constants}{12}
+\beamer@slide {sub:reading_blanks}{13}
+\beamer@slide {sub:reading_multiple_lines}{15}
+\beamer@slide {sec:exercises}{16}
+\beamer@slide {sub:exercise_1}{16}

@@ -1,0 +1,293 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\title{Lab \# 12: Functions - II}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+
+\begin{frame}
+    \frametitle{Returning Values from Functions}
+    \section{Returning Values from Functions} % (fold)
+    \label{sec:returning_values}
+    \begin{itemize}
+        \item When a function completes its execution, it can return a single value to the calling program
+        \item Usually this value consists of an answer to the problem the function has solved
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Returning Values from Functions}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates return values, converts pounds to kg
+#include <iostream>
+using namespace std;
+
+float lbstokgs(float); // declaration
+
+int main()
+{
+    float lbs, kgs;
+    cout << "Enter your weight in pounds: "; cin >> lbs;
+    kgs = lbstokgs(lbs);
+    cout << "Your weight in kilograms is: " << kgs << endl;
+    return 0;
+}
+
+float lbstokgs(float pounds)
+{
+    float kilograms = 0.453592 * pounds;
+    return kilograms;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Returning Values from Functions}
+    \begin{itemize}
+        \item When a function returns a value, the data type of this value must be specified
+        \item In the declaration \texttt{float lbstokgs(float);}, the first \texttt{float} represents the return type
+        \item When a function returns a value, the call to the function \texttt{lbstokgs(lbs)} is considered to take on the value returned by the function
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The \texttt{return} Statement}
+    \subsection{The \texttt{return} Statement} % (fold)
+    \label{sub:the_return_statement}
+    \begin{itemize}
+        \item While many arguments may be sent to a function, only one argument may be returned from it
+        \item Always include a function's return type in the function declaration. If it does not return anything, use the keyword \texttt{void} to indicate this
+    \end{itemize}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Eliminating Unnecessary Variables}
+    \subsection{Eliminating Unnecessary Variables} % (fold)
+    \label{sub:eliminating_unnecessary_variables}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// eliminates unnecessary variables
+#include <iostream>
+using namespace std;
+
+float lbstokgs(float); // declaration
+
+int main()
+{
+    float lbs;
+    cout << "Enter your weight in lbs: "; cin >> lbs;
+    cout << "Your weight in kgs is: " << lbstokgs(lbs) << endl;
+    return 0;
+}
+
+float lbstokgs(float pounds)
+{
+    return 0.453592 * pounds;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Returning Structure Variables}
+    \section{Returning Structure Variables} % (fold)
+    \label{sec:returning_structure_variables}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// demonstrates returning a structure
+#include <iostream>
+using namespace std;
+
+struct Distance
+{
+    int feet;
+    float inches;
+};
+
+Distance addengl(Distance, Distance);
+void engldisp(Distance);
+
+int main()
+{
+    Distance d1, d2, d3;
+    cout << "\nEnter feet: "; cin >> d1.feet;
+    cout << "Enter inches: "; cin >> d1.inches;
+    cout << "\nEnter feet: "; cin >> d2.feet;
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Returning Structure Variables}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=20]
+    cout << "Enter inches: "; cin >> d2.inches;
+    d3 = addengl(d1, d2);
+    cout << endl;
+
+    cout << "Sum of ";
+    engldisp(d1); cout << " and ";
+    engldisp(d2); cout << " is: ";
+    engldisp(d3); cout << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Returning Structure Variables}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=30]
+Distance addengl(Distance dd1, Distance dd2)
+{
+    Distance dd3;
+    dd3.inches = dd1.inches + dd2.inches; //add the inches
+    dd3.feet = 0;
+    if(dd3.inches >= 12.0)
+    {
+        dd3.inches -= 12.0;
+        dd3.feet++;
+    }
+    dd3.feet += dd1.feet + dd2.feet;
+    return dd3;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame} [fragile]
+    \frametitle{Returning Structure Variables}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=43]
+void engldisp(Distance dd)
+{
+    cout << dd.feet << "\'-" << dd.inches << "\"";
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 1}
+    \section{Exercises} % (fold)
+    \label{sec:exercises}
+    \subsection{Exercise 1} % (fold)
+    \label{sub:exercise_1}
+    \begin{itemize}
+        \item Write a function that
+        \begin{itemize}
+            \item takes two \texttt{Distance} values as arguments, and
+            \item returns the larger one.
+        \end{itemize}
+        \item Include a \texttt{main()} program that
+        \begin{itemize}
+            \item accepts two \texttt{Distance} values from the user,
+            \item compares them, and
+            \item displays the larger.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 2}
+    \subsection{Exercise 2} % (fold)
+    \label{sub:exercise_2}
+    \begin{itemize}
+        \item Write a function called \texttt{hms\_to\_secs()} that
+        \begin{itemize}
+            \item takes three \texttt{int} values -- for hours, minutes, and seconds -- as arguments, and
+            \item returns the equivalent time in seconds (type \texttt{long}).
+        \end{itemize}
+        \item Create a program that
+        \begin{itemize}
+            \item exercises this function by repeatedly obtaining a time value in hours, minutes, and seconds from the user (format 12:59:59),
+            \item calling the function, and
+            \item displaying the value of seconds it returns.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise 3}
+    \subsection{Exercise 3} % (fold)
+    \label{sub:exercise_3}
+    \begin{itemize}
+        \item Create a structure called \texttt{Time}. Its three members, all of type \texttt{int}, should be called \texttt{hours}, \texttt{minutes}, and \texttt{seconds}.
+        \item Create two functions,
+        \begin{itemize}
+            \item One of them, \texttt{time\_to\_secs()}, should take as its only argument a structure of type time, and return the equivalent in seconds (type \texttt{long})
+            \item The other one, \texttt{secs\_to\_time()} should take as its only argument a time in seconds (type \texttt{long}), and return a structure of type \texttt{time}
+        \end{itemize}
+        \item Write a program that
+        \begin{itemize}
+            \item exercises these functions by obtaining two time values from the user in hh:mm:ss format, and
+            \item printing out the sum of them in hh:mm:ss format
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\end{document}

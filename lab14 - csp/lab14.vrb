@@ -1,0 +1,11 @@
+\frametitle{Passing Simple Data Types by Reference}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=21]
+// intfrac()
+// finds integer and fractional parts of real number
+void intfrac(float n, int& intp, float& fracp)
+{
+    intp = n;
+    fracp = n - intp; //subtract integer part
+}
+\end{lstlisting}
