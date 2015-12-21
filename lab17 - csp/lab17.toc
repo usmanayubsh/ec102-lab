@@ -10,5 +10,3 @@
 \beamer@subsectionintoc {3}{3}{String Constants}{12}{0}{3}
 \beamer@subsectionintoc {3}{4}{Reading Blanks}{13}{0}{3}
 \beamer@subsectionintoc {3}{5}{Reading Multiple Lines}{15}{0}{3}
-\beamer@sectionintoc {4}{Exercises}{16}{0}{4}
-\beamer@subsectionintoc {4}{1}{Exercise 1}{16}{0}{4}

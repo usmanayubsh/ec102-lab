@@ -46,14 +46,8 @@
 \headcommand {\beamer@subsectionentry {0}{3}{5}{15}{Reading Multiple Lines}}\headcommand {\beamer@subsectionpages {1}{14}}
 \headcommand {\slideentry {3}{5}{0}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\sectionentry {4}{Exercises}{16}{Exercises}{0}}
-\headcommand {\beamer@sectionpages {1}{15}}
+\headcommand {\beamer@partpages {1}{15}}
 \headcommand {\beamer@subsectionpages {1}{15}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{16}{Exercise 1}}\headcommand {\beamer@subsectionpages {16}{15}}
-\headcommand {\slideentry {4}{1}{0}{16/16}{}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@partpages {1}{16}}
-\headcommand {\beamer@subsectionpages {1}{16}}
-\headcommand {\beamer@sectionpages {1}{16}}
-\headcommand {\beamer@documentpages {16}}
-\headcommand {\def \inserttotalframenumber {16}}
+\headcommand {\beamer@sectionpages {1}{15}}
+\headcommand {\beamer@documentpages {15}}
+\headcommand {\def \inserttotalframenumber {15}}
