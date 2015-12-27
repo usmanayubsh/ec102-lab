@@ -1,6 +1,0 @@
-\beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{More Decision Statements}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{The \texttt {switch} Statement}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{The \texttt {break} Statement}{5}{0}{1}
-\beamer@sectionintoc {2}{Solved Example}{6}{0}{2}
-\beamer@sectionintoc {3}{Exercise}{9}{0}{3}

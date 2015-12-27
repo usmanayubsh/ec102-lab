@@ -1,8 +1,0 @@
-\frametitle{Returning Structure Variables}
-    \lstset{style=mystyle}
-\begin{lstlisting} [firstnumber=43]
-void engldisp(Distance dd)
-{
-    cout << dd.feet << "\'-" << dd.inches << "\"";
-}
-\end{lstlisting}

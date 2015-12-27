@@ -1,0 +1,370 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
+\usepackage{inconsolata}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\mode<presentation>
+
+\definecolor{orange}{HTML}{BC2E07}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=orange,
+    urlcolor=blue
+}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\usepackage{datetime}
+\newdate{date}{22}{12}{2015}
+
+\title{Lab \# 16: Arrays and Strings -- Part 2}
+\subtitle{EC-102 -- Computer Systems and Programming}
+
+\author{Usman Ayub Sheikh}
+\institute{School of Mechanical and Manufacturing Engineering (SMME), \\ National University of Sciences and Technology (NUST)}
+\date{\displaydate{date}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+        \tableofcontents
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Passing Arrays to Functions}
+\section{Passing Arrays to Functions} % (fold)
+\label{sec:passing_arrays_to_functions}
+\lstset{style=mystyle}
+            \begin{lstlisting}
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+const int DISTRICTS = 4;
+const int MONTHS = 3;
+void display(double[DISTRICTS][MONTHS]); // declaration
+
+int main()
+{
+    double sales[DISTRICTS][MONTHS] = {
+        {1432.07, 234.50, 654.01},
+        {322.00, 13838.32, 17589.88},
+        {9328.34, 934.00, 4492.30},
+        {12838.29, 2332.63, 32.93}};
+    display(sales); // call
+    cout << endl;
+
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Passing Arrays to Functions}
+\lstset{style=mystyle}
+    \begin{lstlisting} [firstnumber=21]
+// definition
+void display(double funsales[DISTRICTS][MONTHS])
+{
+    int d, m;
+    cout << "\n\n";
+    cout << "                        Month\n";
+    cout << "                1         2         3";
+    for (d = 0; d < DISTRICTS; d++)
+    {
+        cout << "\nDistrict " << d + 1;
+        for (m = 0; m < MONTHS; m++)
+        {
+            cout << setw(10) << funsales[d][m];
+        }
+    }
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}\frametitle{Passing Arrays to Functions}
+    \subsection{Function Declaration with Array Arguments} % (fold)
+    \label{sub:function_declaration_with_array_arguments}
+    \textbf{Function Declaration:} \\
+    Array arguments are represented by the \textbf{data type} and \textbf{size}
+    \begin{center}
+        \texttt{void display(double[DISTRICTS][MONTHS]);} \\
+    \end{center}
+    % subsection function_declaration_with_array_arguments (end)
+
+    \subsection{Function Call with Array Arguments} % (fold)
+    \label{sub:function_call_with_array_arguments}
+    \textbf{Function Call:} \\
+    Only the \textbf{name} of the array is used as an argument
+    \begin{center}
+        \texttt{display(sales);}
+    \end{center}
+    % subsection function_call_with_array_arguments (end)
+
+    \subsection{Function Definition with Array Arguments} % (fold)
+    \label{sub:function_definition_with_array_arguments}
+    \textbf{Function Definition:} \\
+    In function definition, the declarator looks like this:
+    \begin{center}
+        \texttt{void display(double funsales[DISTRICTS][MONTHS])}
+    \end{center}
+    The array argument uses the \textbf{data type}, a \textbf{name} and the \textbf{sizes} of the array dimensions
+    % subsection function_definition_with_array_arguments (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Arrays of Structures}
+    \section{Arrays of Structures} % (fold)
+    \label{sec:arrays_of_structures}
+    Arrays can contain structures as well as simple data types.
+    \lstset{style=mystyle}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+struct Part
+{
+    int modelnumber;
+    int partnumber;
+    float cost;
+};
+
+int main()
+{
+    const int SIZE = 4;
+    int n;
+
+    Part apart[SIZE]; // define array of structures
+\end{lstlisting}
+    % section arrays_of_structures (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Arrays of Structures}
+    \lstset{style=mystyle}
+\begin{lstlisting} [firstnumber=17]
+for (int n = 0; n < SIZE; n++) // get values for all
+    {
+        cout << endl;
+        cout << "Enter model number: "; // get model number
+        cin >> apart[n].modelnumber;
+
+        cout << "Enter part number: "; // get part number
+        cin >> apart[n].partnumber;
+
+        cout << "Enter cost: "; // get cost
+        cin >> apart[n].cost;
+    }
+    cout << endl;
+\end{lstlisting}
+    % section arrays_of_structures (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Arrays of Structures}
+    \lstset{style=mystyle}
+    \begin{lstlisting} [firstnumber=30]
+for (int n = 0; n < SIZE; n++) // show values for all
+    {
+        cout << "Model " << apart[n].modelnumber;
+        cout << " Part " << apart[n].partnumber;
+        cout << " Cost " << apart[n].cost << endl;
+    }
+
+    return 0;
+}
+\end{lstlisting}
+    % section arrays_of_structures (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Strings}
+    \section{Strings} % (fold)
+    \label{sec:strings}
+    \subsection{Introduction} % (fold)
+    \label{sub:introduction}
+    \begin{itemize}
+        \item Array of type \texttt{char}
+        \item As with other data types, strings can be variables or constants.
+        \item The following example asks the user to enter a string and places this string in a string variable
+    \end{itemize}
+    \lstset{style=mystyle}
+    \begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int MAX = 80;
+    char str[MAX];
+
+    cout << "Enter a string: "; cin >> str;
+    cout << "You entered: " << str << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}\frametitle{Avoiding Buffer Overflow}
+    \subsection{Avoiding Buffer Overflow} % (fold)
+    \label{sub:avoiding_buffer_overflow}
+    \begin{itemize}
+        \item What happens if a user enters a string that is longer than the array used to hold it? \\
+        This overly enthusiastic typist would end up crashing the system.
+        \item It is possible to tell the \texttt{>>} operator to limit the number of characters it places in an array
+        \item One way to do that is to use a \texttt{setw} manipulator to specify the maximum number of characters the input buffer can accept
+    \end{itemize}
+    % subsection avoiding_buffer_overflow (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Avoiding Buffer Overflow}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// avoiding buffer overflow using setw manipulator
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    const int MAX = 20;
+    char str[MAX];
+
+    cout << "Enter a string: "; cin >> setw(MAX) >> str;
+    cout << "You entered: " << str << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{String Constants}
+    \subsection{String Constants} % (fold)
+    \label{sub:string_constants}
+    You can initialize a string to a constant value when you define it
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// initialized string
+#include <iostream>
+using namespace std;
+int main()
+{
+    char str[] = "This string has been initialized";
+    cout << str << endl;
+    return 0;
+}
+\end{lstlisting}
+    % subsection string_constants (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Reading Blanks}
+    \subsection{Reading Blanks} % (fold)
+    \label{sub:reading_blanks}
+    \begin{itemize}
+        \item The extraction operator (\texttt{>>}) considers the \texttt{<space>} to be a terminating character
+        \item So, for the following program, if a user enters ``Hello, there'', \texttt{cout << str;} will print ``\texttt{Hello,}'' only
+        \lstset{style=mystyle}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char str[20];
+    cout << "Enter a string: "; cin >> str;
+    cout << str << endl;
+    return 0;
+}
+\end{lstlisting}
+        \item Anything typed after a space is thrown away
+        \item This problem can be solved by using another function \texttt{cin.get()}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Reading Blanks}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// reads string with blanks
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int MAX = 80;
+    char str[MAX];
+
+
+    cout << "\nEnter a string: ";
+    cin.get(str, MAX);
+    cout << "You entered: " << str << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Reading Multiple Lines}
+\subsection{Reading Multiple Lines} % (fold)
+\label{sub:reading_multiple_lines}
+\begin{itemize}
+    \item The third argument of \texttt{cin.get()} specifies the character that tells the function to stop reading
+    \item The default value of this argument is the newline
+    \item The following example overrides the default value by `\$'
+\end{itemize}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+// reads multiple lines, terminates on \$ character
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int MAX = 2000;
+    char str[MAX];
+    cout << "\nEnter a string:\n";
+
+    cin.get(str, MAX, '$'); // terminate with $
+    cout << "You entered:\n" << str << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\end{document}
