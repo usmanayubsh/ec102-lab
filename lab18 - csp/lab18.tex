@@ -56,9 +56,9 @@
 }
 
 \usepackage{datetime}
-\newdate{date}{22}{12}{2015}
+\newdate{date}{28}{12}{2015}
 
-\title{Lab \# 16: Arrays and Strings -- Part 2}
+\title{Lab \# 16: Arrays and Strings -- Part 3}
 \subtitle{EC-102 -- Computer Systems and Programming}
 
 \author{Usman Ayub Sheikh}
@@ -76,295 +76,128 @@
         \tableofcontents
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Passing Arrays to Functions}
-\section{Passing Arrays to Functions} % (fold)
-\label{sec:passing_arrays_to_functions}
-\lstset{style=mystyle}
-            \begin{lstlisting}
-#include <iostream>
-#include <iomanip>
-using namespace std;
-
-const int DISTRICTS = 4;
-const int MONTHS = 3;
-void display(double[DISTRICTS][MONTHS]); // declaration
-
-int main()
-{
-    double sales[DISTRICTS][MONTHS] = {
-        {1432.07, 234.50, 654.01},
-        {322.00, 13838.32, 17589.88},
-        {9328.34, 934.00, 4492.30},
-        {12838.29, 2332.63, 32.93}};
-    display(sales); // call
-    cout << endl;
-
-    return 0;
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Passing Arrays to Functions}
-\lstset{style=mystyle}
-    \begin{lstlisting} [firstnumber=21]
-// definition
-void display(double funsales[DISTRICTS][MONTHS])
-{
-    int d, m;
-    cout << "\n\n";
-    cout << "                        Month\n";
-    cout << "                1         2         3";
-    for (d = 0; d < DISTRICTS; d++)
-    {
-        cout << "\nDistrict " << d + 1;
-        for (m = 0; m < MONTHS; m++)
-        {
-            cout << setw(10) << funsales[d][m];
-        }
-    }
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}\frametitle{Passing Arrays to Functions}
-    \subsection{Function Declaration with Array Arguments} % (fold)
-    \label{sub:function_declaration_with_array_arguments}
-    \textbf{Function Declaration:} \\
-    Array arguments are represented by the \textbf{data type} and \textbf{size}
-    \begin{center}
-        \texttt{void display(double[DISTRICTS][MONTHS]);} \\
-    \end{center}
-    % subsection function_declaration_with_array_arguments (end)
-
-    \subsection{Function Call with Array Arguments} % (fold)
-    \label{sub:function_call_with_array_arguments}
-    \textbf{Function Call:} \\
-    Only the \textbf{name} of the array is used as an argument
-    \begin{center}
-        \texttt{display(sales);}
-    \end{center}
-    % subsection function_call_with_array_arguments (end)
-
-    \subsection{Function Definition with Array Arguments} % (fold)
-    \label{sub:function_definition_with_array_arguments}
-    \textbf{Function Definition:} \\
-    In function definition, the declarator looks like this:
-    \begin{center}
-        \texttt{void display(double funsales[DISTRICTS][MONTHS])}
-    \end{center}
-    The array argument uses the \textbf{data type}, a \textbf{name} and the \textbf{sizes} of the array dimensions
-    % subsection function_definition_with_array_arguments (end)
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Arrays of Structures}
-    \section{Arrays of Structures} % (fold)
-    \label{sec:arrays_of_structures}
-    Arrays can contain structures as well as simple data types.
+\begin{frame}[fragile]\frametitle{Copying a String -- The Hard Way}
+\section{Copying a String} % (fold)
+\label{sec:copying_a_string}
+    \subsection{The Hard Way} % (fold)
+    \label{sub:the_hard_way}
     \lstset{style=mystyle}
 \begin{lstlisting}
-#include <iostream>
+#include<iostream>
+#include<cstring>
 using namespace std;
-
-struct Part
-{
-    int modelnumber;
-    int partnumber;
-    float cost;
-};
 
 int main()
 {
-    const int SIZE = 4;
-    int n;
+  char str1[] = "Oh, Captain, my Captain! "
+    "our fearful trip is done.";
 
-    Part apart[SIZE]; // define array of structures
-\end{lstlisting}
-    % section arrays_of_structures (end)
+  const int MAX = 80;
+  char str2[MAX];
+
+  for(int j = 0; j < strlen(str1); j++)
+    str2[j] = str1[j];
+
+  str2[-1] = '\0';
+  cout << str2 << endl;
+  return 0;
+}\end{lstlisting}
+    % subsection the_hard_way (end)
+% section copying_a_string (end)
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Arrays of Structures}
-    \lstset{style=mystyle}
-\begin{lstlisting} [firstnumber=17]
-for (int n = 0; n < SIZE; n++) // get values for all
-    {
-        cout << endl;
-        cout << "Enter model number: "; // get model number
-        cin >> apart[n].modelnumber;
-
-        cout << "Enter part number: "; // get part number
-        cin >> apart[n].partnumber;
-
-        cout << "Enter cost: "; // get cost
-        cin >> apart[n].cost;
-    }
-    cout << endl;
-\end{lstlisting}
-    % section arrays_of_structures (end)
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Arrays of Structures}
-    \lstset{style=mystyle}
-    \begin{lstlisting} [firstnumber=30]
-for (int n = 0; n < SIZE; n++) // show values for all
-    {
-        cout << "Model " << apart[n].modelnumber;
-        cout << " Part " << apart[n].partnumber;
-        cout << " Cost " << apart[n].cost << endl;
-    }
-
-    return 0;
-}
-\end{lstlisting}
-    % section arrays_of_structures (end)
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Strings}
-    \section{Strings} % (fold)
-    \label{sec:strings}
-    \subsection{Introduction} % (fold)
-    \label{sub:introduction}
+\begin{frame}\frametitle{Copying a String -- The Hard Way}
     \begin{itemize}
-        \item Array of type \texttt{char}
-        \item As with other data types, strings can be variables or constants.
-        \item The following example asks the user to enter a string and places this string in a string variable
-    \end{itemize}
-    \lstset{style=mystyle}
-    \begin{lstlisting}
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    const int MAX = 80;
-    char str[MAX];
-
-    cout << "Enter a string: "; cin >> str;
-    cout << "You entered: " << str << endl;
-    return 0;
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}\frametitle{Avoiding Buffer Overflow}
-    \subsection{Avoiding Buffer Overflow} % (fold)
-    \label{sub:avoiding_buffer_overflow}
-    \begin{itemize}
-        \item What happens if a user enters a string that is longer than the array used to hold it? \\
-        This overly enthusiastic typist would end up crashing the system.
-        \item It is possible to tell the \texttt{>>} operator to limit the number of characters it places in an array
-        \item One way to do that is to use a \texttt{setw} manipulator to specify the maximum number of characters the input buffer can accept
-    \end{itemize}
-    % subsection avoiding_buffer_overflow (end)
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Avoiding Buffer Overflow}
-    \lstset{style=mystyle}
-\begin{lstlisting}
-// avoiding buffer overflow using setw manipulator
-#include <iostream>
-#include <iomanip>
-using namespace std;
-
-int main()
-{
-    const int MAX = 20;
-    char str[MAX];
-
-    cout << "Enter a string: "; cin >> setw(MAX) >> str;
-    cout << "You entered: " << str << endl;
-    return 0;
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{String Constants}
-    \subsection{String Constants} % (fold)
-    \label{sub:string_constants}
-    You can initialize a string to a constant value when you define it
-    \lstset{style=mystyle}
-\begin{lstlisting}
-// initialized string
-#include <iostream>
-using namespace std;
-int main()
-{
-    char str[] = "This string has been initialized";
-    cout << str << endl;
-    return 0;
-}
-\end{lstlisting}
-    % subsection string_constants (end)
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Reading Blanks}
-    \subsection{Reading Blanks} % (fold)
-    \label{sub:reading_blanks}
-    \begin{itemize}
-        \item The extraction operator (\texttt{>>}) considers the \texttt{<space>} to be a terminating character
-        \item So, for the following program, if a user enters ``Hello, there'', \texttt{cout << str;} will print ``\texttt{Hello,}'' only
-        \lstset{style=mystyle}
-\begin{lstlisting}
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    char str[20];
-    cout << "Enter a string: "; cin >> str;
-    cout << str << endl;
-    return 0;
-}
-\end{lstlisting}
-        \item Anything typed after a space is thrown away
-        \item This problem can be solved by using another function \texttt{cin.get()}
+        \item A string constant \texttt{str1} and a string variable \texttt{str2}
+        \item A \texttt{for} loop to copy the string constant to the string variable
+        \item A cstring library function \texttt{strlen} used to find the length of a C-string
+        \item The copied version of the string must be terminated with a null
+        \begin{center}
+            \texttt{str2[j] = `\textbackslash0';}
+        \end{center}
     \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Reading Blanks}
+\begin{frame}[fragile]\frametitle{Copying a String -- The Easy Way}
+    \subsection{The Easy Way} % (fold)
+    \label{sub:the_easy_way}
     \lstset{style=mystyle}
 \begin{lstlisting}
-// reads string with blanks
-#include <iostream>
-using namespace std;
-int main()
-{
-    const int MAX = 80;
-    char str[MAX];
-
-
-    cout << "\nEnter a string: ";
-    cin.get(str, MAX);
-    cout << "You entered: " << str << endl;
-    return 0;
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{Reading Multiple Lines}
-\subsection{Reading Multiple Lines} % (fold)
-\label{sub:reading_multiple_lines}
-\begin{itemize}
-    \item The third argument of \texttt{cin.get()} specifies the character that tells the function to stop reading
-    \item The default value of this argument is the newline
-    \item The following example overrides the default value by `\$'
-\end{itemize}
-    \lstset{style=mystyle}
-\begin{lstlisting}
-// reads multiple lines, terminates on \$ character
-#include <iostream>
+#include<iostream>
+#include<cstring>
 using namespace std;
 
 int main()
 {
-    const int MAX = 2000;
-    char str[MAX];
-    cout << "\nEnter a string:\n";
+  char str1[] = "Tiger, tiger, burning bright\n"
+    "In the forests of the night.";
 
-    cin.get(str, MAX, '$'); // terminate with $
-    cout << "You entered:\n" << str << endl;
+  const int MAX = 80;
+  char str2[MAX];
+
+    strcpy(str2, str1);
+
+  cout << str2 << endl;
+  return 0;
+}
+\end{lstlisting}
+    Note that we are calling \texttt{strcpy} function with \textbf{destination first}.
+    % subsection the_easy_way (end)
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Arrays of Strings}
+    \section{Arrays of Strings} % (fold)
+    \label{sec:arrays_of_strings}
+    \lstset{style=mystyle}
+\begin{lstlisting}
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    const int DAYS = 7;
+    const int MAX = 10;
+
+    char star[DAYS][MAX] = {"Sunday", "Monday", "Tuesday",
+    "Wednesday", "Thursday", "Friday", "Saturday"};
+
+    for(int j = 0; j < DAYS; j++)
+        cout << star[j] << endl;
     return 0;
 }
 \end{lstlisting}
+    % section arrays_of_strings (end)
 \end{frame}
 
+\begin{frame}\frametitle{Exercise 1}
+    \section{Exercises} % (fold)
+    \label{sec:exercises}
+    \subsection{Exercise 1} % (fold)
+    \label{sub:exercise_1}
+    Start with a program that allows the user to input a number of integers, and then stores them in an int array. \\
+    Write a function called \texttt{maxint()} that:
+    \begin{itemize}
+        \item Goes through the array, element by element, looking for the largest one.
+        \item The function should take as arguments the array and the number of elements in it, and
+        \item Return the index number of the largest element.
+    \end{itemize}
+    The program should call this function and then display the largest element and its index number.
+    % subsection exercise (end)
+    % section exercises (end)
+\end{frame}
+
+\begin{frame}\frametitle{Exercise 2}
+    \subsection{Exercise 2} % (fold)
+    \label{sub:exercise_2}
+    Write a function called \texttt{reversit()} that reverses a C-string (an array of char).
+    \begin{itemize}
+        \item Use a for-loop that swaps the first and last characters, then the second and next-to-last characters, and so on.
+        \item The string should be passed to \texttt{reversit()} as an argument.
+        \item Write a program to exercise \texttt{reversit()}. The program should get a string from the user, call \texttt{reversit()}, and print out the result.
+    \end{itemize}
+    Use an input method that allows embedded blanks. Test the program with Napoleon’s famous phrase,  ``Able was I ere I saw Elba.''
+       % subsection exercise (end)
+    % section exercises (end)
+\end{frame}
 \end{document}
